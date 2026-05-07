@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Now - JOY Hotel</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Raleway:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/booking.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="container">
+        <a href="index.html" class="logo"
+          ><img src="../images/logo.png" alt="JOY Hotel Logo"
+        /></a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="location.html">Location</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <section class="page-header">
+      <div class="container">
+        <h1>Book Your Stay</h1>
+        <p>Complete your reservation using the form below.</p>
+      </div>
+    </section>
+
+    <section class="form-section">
+      <div class="container">
+        <div class="form-box" style="max-width: 800px">
+          <form action="#" method="POST">
+            <h3 style="margin-bottom: 25px; text-align: center">
+              Guest Information
+            </h3>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="firstName">First Name *</label>
+                <input type="text" id="firstName" name="firstName" required />
+              </div>
+              <div class="form-group">
+                <label for="lastName">Last Name *</label>
+                <input type="text" id="lastName" name="lastName" required />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" required />
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone Number *</label>
+                <input type="tel" id="phone" name="phone" required />
+              </div>
+            </div>
+
+            <h3 style="margin: 35px 0 25px; text-align: center">
+              Reservation Details
+            </h3>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="checkin">Check-in Date *</label>
+                <input type="date" id="checkin" name="checkin" required />
+              </div>
+              <div class="form-group">
+                <label for="checkout">Check-out Date *</label>
+                <input type="date" id="checkout" name="checkout" required />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="roomType">Room Type *</label>
+                <select id="roomType" name="roomType" required>
+                  <option value="">Select a room</option>
+                  <option value="standard">Standard Room - $199/night</option>
+                  <option value="deluxe">Deluxe Room - $299/night</option>
+                  <option value="executive">
+                    Executive Suite - $449/night
+                  </option>
+                  <option value="family">Family Room - $349/night</option>
+                  <option value="presidential">
+                    Presidential Suite - $899/night
+                  </option>
+                  <option value="honeymoon">
+                    Honeymoon Suite - $499/night
+                  </option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="guests">Number of Guests *</label>
+                <select id="guests" name="guests" required>
+                  <option value="1">1 Guest</option>
+                  <option value="2">2 Guests</option>
+                  <option value="3">3 Guests</option>
+                  <option value="4">4 Guests</option>
+                  <option value="5+">5+ Guests</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="specialRequests">Special Requests</label>
+              <textarea
+                id="specialRequests"
+                name="specialRequests"
+                placeholder="Any special requests or requirements..."
+              ></textarea>
+            </div>
+
+            <h3 style="margin: 35px 0 25px; text-align: center">Add-ons</h3>
+
+            <div class="form-group">
+              <label
+                style="
+                  display: flex;
+                  align-items: center;
+                  gap: 10px;
+                  cursor: pointer;
+                "
+              >
+                <input type="checkbox" name="breakfast" style="width: auto" />
+                Breakfast included ($25/night per guest)
+              </label>
+            </div>
+
+            <div class="form-group">
+              <label
+                style="
+                  display: flex;
+                  align-items: center;
+                  gap: 10px;
+                  cursor: pointer;
+                "
+              >
+                <input type="checkbox" name="airport" style="width: auto" />
+                Airport transfer ($50 each way)
+              </label>
+            </div>
+
+            <div class="form-group">
+              <label
+                style="
+                  display: flex;
+                  align-items: center;
+                  gap: 10px;
+                  cursor: pointer;
+                "
+              >
+                <input type="checkbox" name="spa" style="width: auto" />
+                Spa credit ($100)
+              </label>
+            </div>
+
+            <h3 style="margin: 35px 0 25px; text-align: center">
+              Payment Information
+            </h3>
+
+            <div class="form-group">
+              <label for="cardName">Name on Card *</label>
+              <input type="text" id="cardName" name="cardName" required />
+            </div>
+
+            <div class="form-group">
+              <label for="cardNumber">Card Number *</label>
+              <input
+                type="text"
+                id="cardNumber"
+                name="cardNumber"
+                placeholder="1234 5678 9012 3456"
+                required
+              />
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="expiry">Expiry Date *</label>
+                <input
+                  type="text"
+                  id="expiry"
+                  name="expiry"
+                  placeholder="MM/YY"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="cvv">CVV *</label>
+                <input
+                  type="text"
+                  id="cvv"
+                  name="cvv"
+                  placeholder="123"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label
+                style="
+                  display: flex;
+                  align-items: center;
+                  gap: 10px;
+                  cursor: pointer;
+                "
+              >
+                <input type="checkbox" required style="width: auto" />
+                I agree to the
+                <a href="policies.html">cancellation policy</a> and terms.
+              </label>
+            </div>
+
+            <button
+              type="submit"
+              class="btn"
+              style="width: 100%; margin-top: 20px"
+            >
+              Complete Booking
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-about">
+            <div class="footer-logo">
+              <img src="../images/logo.png" alt="JOY Hotel Logo" /><span
+                >JOY HOTEL</span
+              >
+            </div>
+            <p>Welcome to your home away from home.</p>
+            <p>
+              Experience luxurious comfort with world-class amenities right in
+              the heart of the city.
+            </p>
+          </div>
+          <div>
+            <h4>Explore</h4>
+            <ul class="footer-links">
+              <li><a href="rooms.html">Rooms & Suites</a></li>
+              <li><a href="dining.html">Dining & Bar</a></li>
+              <li><a href="spa.html">Spa</a></li>
+              <li><a href="events.html">Meetings & Events</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Guest Services</h4>
+            <ul class="footer-links">
+              <li><a href="reservation.html">Manage Reservation</a></li>
+              <li><a href="offers.html">Special Offers</a></li>
+              <li><a href="policies.html">Hotel Policies</a></li>
+              <li><a href="faqs.html">FAQs</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Contact Us</h4>
+            <div class="footer-contact">
+              <p>123 Luxury Avenue, City Center</p>
+              <p>reservations@joyhotel.com</p>
+              <p>+1 (555) 123-4567</p>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 JOY Hotel. All rights reserved.</p>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook">f</a>
+            <a href="#" aria-label="X">X</a>
+            <a href="#" aria-label="Instagram">IG</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
